@@ -33,7 +33,7 @@ describe('AppController', () => {
     dataService = service['dataAbstractService'];
 
     // app.get returns undefined due to request scoped architecture
-    undefinedService = app.get(AbstractService);
+    // undefinedService = app.get(AbstractService);
   });
 
   describe('root', () => {

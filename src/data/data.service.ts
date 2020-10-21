@@ -1,7 +1,7 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Scope } from '@nestjs/common';
 import { AbstractService } from './abstract.service';
 
-@Injectable()
+@Injectable({ scope: Scope.REQUEST })
 export class DataService extends AbstractService {
   public getHttp() {
     // assume an http call
