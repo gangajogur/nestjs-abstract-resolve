@@ -9,7 +9,7 @@ describe('AppController', () => {
   let appController: AppController;
   let service: AppService;
   let dataService: AbstractService;
-  let invalidService: AbstractService;
+  let undefinedService: AbstractService;
 
   beforeEach(async () => {
     const contextId = ContextIdFactory.create();
@@ -33,7 +33,7 @@ describe('AppController', () => {
     dataService = service['dataAbstractService'];
 
     // app.get returns undefined due to request scoped architecture
-    invalidService = app.get(AbstractService);
+    undefinedService = app.get(AbstractService);
   });
 
   describe('root', () => {
